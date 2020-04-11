@@ -1,7 +1,7 @@
 <div class="container">
   <div class = "list-group-item px-20" style = "border-radius: 10px" >
     <% @bookmarks.each do |bookmark|%>
-      <br>
+      <hr><br><br><br><hr>
       <div style = "text-align: center">
         <h2><%= bookmark.name%></h2>
       </div>
@@ -14,5 +14,5 @@
       <%= bookmark.body %>
     <%end%>
   </div>
-  <br><br>
+
 </div>
