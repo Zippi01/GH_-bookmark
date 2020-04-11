@@ -13,9 +13,8 @@
              Logged in as <%= current_user.email %>
            </div>
            <% if current_user && current_user.admin == true %>
-              <%= link_to "Админ", admin_categories_path, class:'btn btn-outline-dark'  %>
+              <%= link_to "Добавить категории", new_admin_category_path, class:'btn btn-outline-dark'%>
            <% end %>
-           <%= link_to "Добавить закладку", new_bookmark_path, class:'btn btn-outline-dark my-2 my-sm-0'%>
            <%= link_to "Выход", destroy_user_session_path, :method => :delete, class:'btn btn-outline-dark my-2 my-sm-0'  %>
        <% else %>
            <%= link_to "Вход", new_user_session_path, class:'btn btn-outline-dark my-2 my-sm-0'  %>

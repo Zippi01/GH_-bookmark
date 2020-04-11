@@ -1,13 +1,11 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
-<%= link_to "New", new_admin_category_path%>
   <% @categories.each do |category| %>
     <hr>
       <div><%= category.name %></div>
-      <%= link_to "Edit", edit_admin_category_path(category),
-                          class:"btn btn-success"%>
-      <%= link_to "Destroy", admin_category_path(category),
-                             method: :delete,
-                             data: { confirm: 'Are you sure?' },
-                             class:"btn btn-success"%>
+      <br>
+        <%= link_to "Edit", edit_admin_category_path(category), class:"btn btn-secondary"%>
+        <%= link_to "Destroy", admin_category_path(category), method: :delete,data: { confirm: 'Are you sure?' }, class:"btn btn-secondary"%>
     <hr>
   <% end %>
+</div>
