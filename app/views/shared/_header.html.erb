@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+        <li class="">
+          <%= link_to "Профиль", show_path%>
+        </li>
+        <li class="">
+          <%= link_to "Выход", destroy_user_session_path, :method => :delete%>
+        </li>
+        <% else %>
+          <li class="">
+            <%= link_to "Вход", new_user_session_path%>
+          </li>
+          <li class="">
+            <%= link_to "Регистрация", new_user_registration_path %>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+</nav>

@@ -5,11 +5,29 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+      <% if user_signed_in? %>
+      <!-- <li class="">
+        <%# <%= link_to "Профиль", show_path%> 
+      </li> -->
+      <li class="">
+        <%= link_to "Выход", destroy_user_session_path, :method => :delete%>
+      </li>
+      <% else %>
+        <li class="">
+          <%= link_to "Вход", new_user_session_path%>
+        </li>
+        <li class="">
+          <%= link_to "Регистрация", new_user_registration_path %>
+        </li>
+      <% end %>
+    <%# <%= render 'shared/header' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
