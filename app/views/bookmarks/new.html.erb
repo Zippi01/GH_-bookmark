@@ -1,0 +1,14 @@
+<%= form_with(model: @bookmark, local: true) do |form| %>
+
+  <div class = "field">
+    <strong><%= form.label :"Link:"%></strong>
+    <%= form.text_field :link %>
+    <%= form.select :category_id, Category.all.pluck(:name,:id),{},{class: "select2_form"}%>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit :Done, class:"btn btn-success"  %>
+  </div>
+    <p></p>
+<% end %>

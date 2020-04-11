@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: GH_development
+  database: bookmark_development
   pool: 5
   username: katya
   password: 123

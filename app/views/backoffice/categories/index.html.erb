@@ -1,0 +1,11 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+  <% @categories.each do |category| %>
+    <hr>
+      <div><%= category.name %></div>
+      <br>
+        <%= link_to "Edit", edit_admin_category_path(category), class:"btn btn-secondary"%>
+        <%= link_to "Destroy", admin_category_path(category), method: :delete,data: { confirm: 'Are you sure?' }, class:"btn btn-secondary"%>
+    <hr>
+  <% end %>
+</div>
