@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BackofficeControllerTest < ActionDispatch::IntegrationTest
+class BackOfficeControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
